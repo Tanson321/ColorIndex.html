@@ -171,14 +171,14 @@ body {
 
     .fa-twitter-square{
         color:black;
-        padding: 0 0 0 0;
+        padding: none;
     }
 
     .icons{
-        text-align: center;
-        float: left;
+        display: inline-block;
         position:relative;
-        left:20%;
-
+        transform: translateX(-30%);
     }
+
+
 }
