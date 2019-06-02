@@ -1,4 +1,4 @@
-var body = document.getElementById('body'); 
+//var body = document.getElementById('body'); 
 var header = document.getElementById('header'); 
 var main = document.getElementById('main'); 
 var bottom = document.getElementById('bottom'); 
@@ -15,7 +15,7 @@ window.addEventListener('load',colorPickerMain,false);
 window.addEventListener('load',colorPickerBottom,false);
 window.addEventListener('load',colorPickerFooter,false);
 
-function colorPickerBody(){
+/*function colorPickerBody(){
   var i = 0;
   var colorArray = [];
  
@@ -25,7 +25,7 @@ function colorPickerBody(){
     i++;
   body.style.background  = 'rgb('+colorArray+')';
 }
-};
+};*/
 
 
 
@@ -39,6 +39,9 @@ function colorPickerHeader(){
       i++;
     header.style.background  = 'rgb('+colorArray+')';
   }
+  let paletteOne = document.getElementById('palette-one');
+  paletteOne.innerHTML = header.style.background;
+  paletteOne.style.background ='rgb('+colorArray+')';
   };
    
 function colorPickerMain(){
@@ -51,7 +54,11 @@ function colorPickerMain(){
       i++;
     main.style.background  = 'rgb('+colorArray+')';
   }
+  let paletteTwo = document.getElementById('palette-two');
+  paletteTwo.innerHTML = main.style.background;
+  paletteTwo.style.background ='rgb('+colorArray+')';
   };
+
   
   function colorPickerBottom(){
     var i = 0;
@@ -63,6 +70,9 @@ function colorPickerMain(){
       i++;
     bottom.style.background  = 'rgb('+colorArray+')';
   }
+  let paletteThree = document.getElementById('palette-three');
+  paletteThree.innerHTML = bottom.style.background;
+  paletteThree.style.background ='rgb('+colorArray+')';
   };
 
 function colorPickerFooter(){
@@ -75,9 +85,15 @@ function colorPickerFooter(){
       i++;
     footer.style.background  = 'rgb('+colorArray+')';
   }
+  let paletteFour = document.getElementById('palette-four');
+  paletteFour.innerHTML = footer.style.background;
+  paletteFour.style.background ='rgb('+colorArray+')';
   };
 
   window.addEventListener('load',function(){
     this.console.log(body.style.background)
 },false);
  
+$('#showcolorpalette').click(function(){
+  $('#palette-all').show();
+});

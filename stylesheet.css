@@ -28,7 +28,7 @@
 }
 
 .header-container{
-    width:100%;
+    width:auto;
     height:auto;
     padding-top:3px;
     padding-bottom: 3px;
@@ -42,7 +42,7 @@
 }
 
 .top-container{
-    width: 100%;
+    width: auto;
     margin: 30px 30px;
     padding-top:3px;
     padding-bottom:15px;
@@ -55,10 +55,59 @@
 }
 
 .bottom-container{
-    width:100%;
+    width:auto;
     margin: 30px 30px;
     padding-top:3px;
     padding-bottom:15px;
+}
+
+.showcolorpalette{
+    padding: 5px 15px 5px 15px;
+    margin: 3% 0 3% 0;
+    width:190px;
+    display:block;
+    background-color:#f4f5f4;
+    border-radius:5px;
+}
+
+.showcolorpalette p{
+    text-align: center;
+    color:black;
+}
+
+.your-color-palette {
+    width:100%;
+    text-align: center;
+}
+
+.palette-wrapper{
+    width:100%;
+    height:287px;
+    display:block;
+}
+
+.palette-one{
+    height:287px;
+    width:25%;
+    float:left;
+}
+
+.palette-two{
+    height:287px;
+    width:25%;
+    float:left;
+}
+
+.palette-three{
+    height:287px;
+    width:25%;
+    float:left;
+}
+
+.palette-four{
+    height:287px;
+    width:25%;
+    float:left;
 }
 
 .footer-wrapper{
@@ -95,7 +144,9 @@
 }
 
 .icons{
-    text-align: center;
+    display: inline-block;
+    position:relative;
+    transform: translateX(-39%);
 }
 
 body {
@@ -145,40 +196,9 @@ body {
 	}
 }
 
-@media screen and (max-width: 480px) {
-
-    .header-wrapper h1{
-        font-size:15px;
-    }
-
-    .top-container{
-        font-size: 15px;
-        width:auto;
-        }
-        
-    .bottom-container{
-        font-size: 15px;
-        width:auto;
-    }
-
-    .footer-container{
-        width:auto;
-    }
-
-    .github{
-        display:none;
-    }
-
-    .fa-twitter-square{
-        color:black;
-        padding: none;
-    }
-
-    .icons{
-        display: inline-block;
-        position:relative;
-        transform: translateX(-30%);
-    }
-
-
+#palette-all{
+    display:none;
 }
+
+
+
