@@ -200,5 +200,11 @@ body {
     display:none;
 }
 
+@media screen and (max-width: 480px) {
 
+    .header-wrapper h1{
+        font-size:15px;
+    }
+
+}
 
