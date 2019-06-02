@@ -1,17 +1,20 @@
 var body = document.getElementById('body'); 
 var header = document.getElementById('header'); 
 var main = document.getElementById('main'); 
+var bottom = document.getElementById('bottom'); 
 var footer = document.getElementById('footer'); 
+
 
 var min = 0;
 var max = 255;
 
 
-window.addEventListener('load',colorPickerBody,false);
+//window.addEventListener('load',colorPickerBody,false);
 window.addEventListener('load',colorPickerHeader,false);
 window.addEventListener('load',colorPickerMain,false);
+window.addEventListener('load',colorPickerBottom,false);
 window.addEventListener('load',colorPickerFooter,false);
- 
+
 function colorPickerBody(){
   var i = 0;
   var colorArray = [];
@@ -24,6 +27,8 @@ function colorPickerBody(){
 }
 };
 
+
+
 function colorPickerHeader(){
     var i = 0;
     var colorArray = [];
@@ -35,7 +40,6 @@ function colorPickerHeader(){
     header.style.background  = 'rgb('+colorArray+')';
   }
   };
-
    
 function colorPickerMain(){
     var i = 0;
@@ -49,7 +53,18 @@ function colorPickerMain(){
   }
   };
   
- 
+  function colorPickerBottom(){
+    var i = 0;
+    var colorArray = [];
+   
+    while(i<3){
+      var num =Math.floor( Math.random() * (max + 1 - min) ) + min ;
+      colorArray.push(num);
+      i++;
+    bottom.style.background  = 'rgb('+colorArray+')';
+  }
+  };
+
 function colorPickerFooter(){
     var i = 0;
     var colorArray = [];
@@ -62,3 +77,7 @@ function colorPickerFooter(){
   }
   };
 
+  window.addEventListener('load',function(){
+    this.console.log(body.style.background)
+},false);
+ 
